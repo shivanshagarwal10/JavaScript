@@ -1,0 +1,39 @@
+//singleton
+//Object.create
+
+// object literals
+
+const mySym = Symbol("key1") 
+const JsUser = {
+    name: "Shivansh",
+    fullname: "Shivansh Agarwal",
+    [mySym] : "mykey1", 
+    age: 21,
+    loctaion: "Jaipur",
+    email: "shiva@gmail.com",
+    isLoggedIn: false,
+    lastLogindates: ["Monday", "Saturday"]
+}
+console.log(JsUser.fullname);
+console.log(JsUser["fullname"]);
+console.log(JsUser["email"])
+console.log(typeof JsUser.mySym);
+console.log(JsUser[mySym]);
+
+JsUser.email = "shiva@gmail.com"
+Object.freeze(JsUser);
+console.log([mySym]);
+
+JsUser.greeting = function(){
+    console.log("hello JS user");
+}
+
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this.age}`)
+}
+console.log(JsUser.greeting);
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
+
+/* Here I have removed all the commits so if you run directly it may give error 
+so you have to add or remove the commits according to your need.*/
